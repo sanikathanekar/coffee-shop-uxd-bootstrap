@@ -1,0 +1,37 @@
+.tabular {
+  overflow: hidden;
+  background-color: #202124;
+}
+
+.tabular button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tabular button:hover {
+  background-color: lightslategray;
+  color: #f6ae84;
+}
+
+.tabular button.active {
+  background-color: black;
+}
+
+.content {
+  display: none;
+  padding: 6px 12px;
+  color: #dbdbdd;
+  border: 1px solid #dbdbdd;
+}
+table,
+td,
+tr {
+  table-layout: fixed;
+  width: 800px;
+  font-size: 16px;
+}

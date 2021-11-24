@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Menu</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link  rel="stylesheet" href="../css/base.css">
+        <link  rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/menu.css">
+        <script>
+            function activateCofeeTab() {
+                 document.getElementById("coffeet").click();
+            }
+            function openTab(event, category) {
+                let i, content, tabCls;
+                content = document.getElementsByClassName("content");
+                for (i = 0; i < content.length; i++) {
+                    content[i].style.display = "none";
+                }
+    
+                tabCls = document.getElementsByClassName("tabCls");
+                for (i = 0; i < tabCls.length; i++) {
+                    tabCls[i].className = tabCls[i].className.replace(" active", "");
+                }
+    
+                document.getElementById(category).style.display = "block";
+                event.currentTarget.className += " active";
+            }
+        </script>
+    </head>
+    <body onload="activateCofeeTab()">    
+        <div>
+            <div class="header" >
+                <a href="../index.html"><img src="../images/logo.png" width="200px" height="80px"/></a>
+                <nav class="nav_class">
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+               </nav>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="row child">
+                        <h1>Menu</h1>
+                    </div>
+                    <div class="row child">
+                        <div class="tabular">
+                                <button id="coffeet" class="tabCls" onclick="openTab(event, 'coffeetab')">Coffee</button>
+                                <button id="bakeryt" class="tabCls" onclick="openTab(event, 'bakerytab')">Bakery</button>
+                                <button id="otherdrinkst" class="tabCls" onclick="openTab(event, 'otherdrinkstab')">Other Drinks</button>
+                        </div>  
+                    </div>
+                    <div class="row child">
+                        <div id="coffeetab" class="content" style="overflow-x: auto;">
+                                <table>
+                                    <tr>
+                                        <th><h2>Name</h2></th>
+                                        <th><h2>Price</h2></th>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Expresso</p></td>
+                                        <td><p>$2.65</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Cappuccino</p></td>
+                                        <td><p>$3.50</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Macchiato</p></td>
+                                        <td><p>$5.20</p></td>
+                                    </tr>
+                                </table>
+                        </div>                            
+                        <div id="bakerytab" class="content" style="overflow-x: auto;">
+                            <table>
+                                <tr>
+                                    <th><h2>Name</h2></th>
+                                    <th><h2>Price</h2></th>
+                                </tr>
+                                <tr>
+                                    <td><p>Choclate Muffin</p></td>
+                                    <td><p>$2.20</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Choclate Croissant</p></td>
+                                    <td><p>$3.50</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Almond Biscuit</p></td>
+                                    <td><p>$1.20</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                            
+                        <div id="otherdrinkstab" class="content">
+                            <table>
+                                <tr>
+                                    <th><h2>Name</h2></th>
+                                    <th><h2>Price</h2></th>
+                                </tr>
+                                <tr>
+                                    <td><p>Chai</p></td>
+                                    <td><p>$1.20</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Mango Lassi</p></td>
+                                    <td><p>$4.50</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Coconut Smoothie</p></td>
+                                    <td><p>$5.20</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </body>
+</html>
