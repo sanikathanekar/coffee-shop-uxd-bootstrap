@@ -14,24 +14,20 @@
 }
 
 .tabular button:hover {
-  background-color: lightslategray;
-  color: #f6ae84;
+  background-color: lightslategray ;
+  color: #f6ae84 !important;
 }
 
 .tabular button.active {
   background-color: black;
 }
-
+table {
+  table-layout: fixed !important;
+}
 .content {
   display: none;
   padding: 6px 12px;
   color: #dbdbdd;
   border: 1px solid #dbdbdd;
 }
-table,
-td,
-tr {
-  table-layout: fixed;
-  width: 800px;
-  font-size: 16px;
-}
+

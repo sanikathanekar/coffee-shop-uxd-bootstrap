@@ -1,29 +1,19 @@
 li,
 a,
 button {
-  font-family: "Overpass" m sans-serif;
-  font-weight: 600;
-  color: #dbdbdd;
-  text-decoration: none;
+  font-family: "Overpass" m sans-serif !important;
+  font-weight: 600 !important;
+  color: #dbdbdd !important;
+  text-decoration: none !important;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10%;
-  color: #dbdbdd;
-  background-color: black;
+
+nav {
+  color: #dbdbdd !important;
+  background-color: black !important;
 }
-.nav_class {
-  list-style: none;
-}
-.nav_class li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-.nav_class a {
+nav a {
   transition: all 0.3s ease 0s;
 }
-.nav_class li a:hover {
-  color: #f6ae84;
+nav li a:hover {
+  color: #f6ae84 !important;
 }

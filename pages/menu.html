@@ -5,10 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Menu</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link  rel="stylesheet" href="../css/base.css">
         <link  rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <script>
             function activateCofeeTab() {
                  document.getElementById("coffeet").click();
@@ -31,93 +34,118 @@
         </script>
     </head>
     <body onload="activateCofeeTab()">    
-        <div>
-            <div class="header" >
-                <a href="../index.html">
-                    <img alt="" src="../images/logo.png" width="200" height="80"/>
-                </a>
-                <ul class="nav_class">
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                </ul>
+    
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html" style="color: #f6ae84 !important ;">Sanika's Coffee Shop</a>
+                    <button 
+                    class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" 
+                    aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <div class="row">
-                    <div class="row child">
-                        <h1>Menu</h1>
-                    </div>
-                    <div class="row child">
-                        <div class="tabular">
-                                <button id="coffeet" class="tabCls" onclick="openTab(event, 'coffeetab')">Coffee</button>
-                                <button id="bakeryt" class="tabCls" onclick="openTab(event, 'bakerytab')">Bakery</button>
-                                <button id="otherdrinkst" class="tabCls" onclick="openTab(event, 'otherdrinkstab')">Other Drinks</button>
-                        </div>  
-                    </div>
-                    <div class="row child">
-                        <div id="coffeetab" class="content" style="overflow-x: auto;">
-                                <table>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Price</th>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Expresso</p></td>
-                                        <td><p>$2.65</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Cappuccino</p></td>
-                                        <td><p>$3.50</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Macchiato</p></td>
-                                        <td><p>$5.20</p></td>
-                                    </tr>
-                                </table>
-                        </div>                            
-                        <div id="bakerytab" class="content" style="overflow-x: auto;">
-                            <table>
+          </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Menu</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tabular">
+                        <button id="coffeet" class="tabCls" onclick="openTab(event, 'coffeetab')">Coffee</button>
+                        <button id="bakeryt" class="tabCls" onclick="openTab(event, 'bakerytab')">Bakery</button>
+                        <button id="otherdrinkst" class="tabCls" onclick="openTab(event, 'otherdrinkstab')">Other Drinks</button>
+                </div>  
+            </div>
+            <div class="row">
+                <div id="coffeetab" class="col content" style="overflow-x: auto;">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p>Expresso</p></td>
+                                    <td><p>$2.65</p></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Choclate Muffin</p></td>
-                                    <td><p>$2.20</p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Choclate Croissant</p></td>
+                                    <td><p>Cappuccino</p></td>
                                     <td><p>$3.50</p></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Almond Biscuit</p></td>
-                                    <td><p>$1.20</p></td>
-                                </tr>
-                            </table>
-                        </div>
-                            
-                        <div id="otherdrinkstab" class="content">
-                            <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                </tr>
-                                <tr>
-                                    <td><p>Chai</p></td>
-                                    <td><p>$1.20</p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Mango Lassi</p></td>
-                                    <td><p>$4.50</p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Coconut Smoothie</p></td>
+                                    <td><p>Macchiato</p></td>
                                     <td><p>$5.20</p></td>
                                 </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>     
+                            </tbody>
+                           
+                        </table>
+                </div>                            
+                <div id="bakerytab" class="col content" style="overflow-x: auto;">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p>Choclate Muffin</p></td>
+                                <td><p>$2.20</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Choclate Croissant</p></td>
+                                <td><p>$3.50</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Almond Biscuit</p></td>
+                                <td><p>$1.20</p></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                    
+                <div id="otherdrinkstab" class="col content">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                       <tbody>
+                            <tr>
+                                <td><p>Chai</p></td>
+                                <td><p>$1.20</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Mango Lassi</p></td>
+                                <td><p>$4.50</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Coconut Smoothie</p></td>
+                                <td><p>$5.20</p></td>
+                            </tr>
+                       </tbody>   
+                    </table>
+                </div>
             </div>
-        </div>
+        </div>      
     </body>
 </html>
